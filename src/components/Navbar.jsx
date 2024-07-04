@@ -12,6 +12,7 @@ const Navbar = () => {
   const [contactiAccordion, setContactAccordion] = useState(false);
   const [alumniHovered, setAlumniHovered] = useState(false);
   const [contactHovered, setContactHovered] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const mobileNavRef = useRef(null);
   const menuButtonRef = useRef(null);
 
@@ -32,19 +33,33 @@ const Navbar = () => {
     }
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <>
-      <header className="bg-umakdarkblue h-14 flex justify-between items-center px-8 text-white transition-all duration-300">
+      <header
+        className={`${
+          isScrolled ? "bg-umakdarkblue" : "bg-transparent"
+        } h-14 flex justify-between items-center px-8 text-white transition-all duration-300 fixed w-full top-0 z-50`}
+      >
         <div>
           <Link to="/">
             <div className="flex items-center space-x-2">
@@ -57,14 +72,18 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center uppercase text-sm font-semibold mr-8 relative">
             <div
               className=""
-              onMouseEnter={() => setAlumniHovered(!alumniHovered)}
-              onMouseLeave={() => setAlumniHovered(!alumniHovered)}
+              onMouseEnter={() => setAlumniHovered(true)}
+              onMouseLeave={() => setAlumniHovered(false)}
             >
               <Link to="/" className="px-4 py-4 hover:text-blue-300">
                 Alumni
               </Link>
               <div
-                className={`absolute font-medium top-full left-0 text-nowrap text-xs bg-umakdarkblue flex flex-col overflow-hidden duration-300 ease-in-out ${alumniHovered ? "max-h-96 border-white border-b border-x" : "max-h-0"}`}
+                className={`absolute font-medium top-full left-0 text-nowrap text-xs bg-umakdarkblue flex flex-col overflow-hidden duration-300 ease-in-out ${
+                  alumniHovered
+                    ? "max-h-96 border-white border-b border-x"
+                    : "max-h-0"
+                }`}
               >
                 <Link to="/featured" className="px-4 py-2 hover:bg-blue-900">
                   Featured Alumni
@@ -85,14 +104,18 @@ const Navbar = () => {
             </Link>
             <div
               className=""
-              onMouseEnter={() => setContactHovered(!contactHovered)}
-              onMouseLeave={() => setContactHovered(!contactHovered)}
+              onMouseEnter={() => setContactHovered(true)}
+              onMouseLeave={() => setContactHovered(false)}
             >
               <Link to="/" className="px-4 py-4 hover:text-blue-300">
-                Alumni
+                Contact
               </Link>
               <div
-                className={`absolute top-full font-medium right-0 text-nowrap text-xs bg-umakdarkblue flex flex-col overflow-hidden duration-300 ease-in-out ${contactHovered ? "max-h-96 border-white border-b border-x" : "max-h-0"}`}
+                className={`absolute top-full font-medium right-0 text-nowrap text-xs bg-umakdarkblue flex flex-col overflow-hidden duration-300 ease-in-out ${
+                  contactHovered
+                    ? "max-h-96 border-white border-b border-x"
+                    : "max-h-0"
+                }`}
               >
                 <Link to="/" className="px-4 py-2 hover:bg-blue-900">
                   Feedback
@@ -127,7 +150,9 @@ const Navbar = () => {
             />
           </button>
           <div
-            className={`flex flex-col bg-umakdarkblue overflow-hidden duration-300 ease-in-out ${alumniAccordion ? "max-h-full" : "max-h-0"}`}
+            className={`flex flex-col bg-umakdarkblue overflow-hidden duration-300 ease-in-out ${
+              alumniAccordion ? "max-h-full" : "max-h-0"
+            }`}
           >
             <Link to="/" className="py-4 pr-4 pl-10 hover:bg-blue-900">
               Alumni
@@ -157,7 +182,9 @@ const Navbar = () => {
             />
           </button>
           <div
-            className={`flex flex-col bg-umakdarkblue overflow-hidden duration-300 ease-in-out ${contactiAccordion ? "max-h-full" : "max-h-0"}`}
+            className={`flex flex-col bg-umakdarkblue overflow-hidden duration-300 ease-in-out ${
+              contactiAccordion ? "max-h-full" : "max-h-0"
+            }`}
           >
             <Link to="/" className="py-4 pr-4 pl-10 hover:bg-blue-900">
               Feedback

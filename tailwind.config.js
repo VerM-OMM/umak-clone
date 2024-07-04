@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
-const flowbite = require("flowbite-react/tailwind");
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+export default withMT({
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -16,5 +17,5 @@ export default {
       },
     },
   },
-  plugins: [flowbite.plugin()],
-};
+  plugins: [],
+});
