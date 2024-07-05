@@ -17,5 +17,22 @@ export default withMT({
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          ".font-light-simulated": {
+            textShadow: "1px 1px 1px rgba(0, 0, 0, 0.1)",
+          },
+          ".font-medium-simulated": {
+            textShadow: "1px 1px 1px rgba(0, 0, 0, 0.2)",
+          },
+          ".font-bold-simulated": {
+            textShadow: "1px 1px 1px rgba(0, 0, 0, 0.3)",
+          },
+        },
+        ["responsive", "hover"],
+      );
+    },
+  ],
 });

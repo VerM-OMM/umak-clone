@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/umaklogo.png";
 import { FaSearch } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 import { useState, useEffect, useRef } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -28,7 +29,7 @@ const Navbar = () => {
   };
 
   const handleResize = () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 719) {
       setMobileOpen(false);
     }
   };
@@ -56,15 +57,17 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`${
-          isScrolled ? "bg-umakdarkblue" : "bg-transparent"
-        } h-14 flex justify-between items-center px-8 text-white transition-all duration-300 fixed w-full top-0 z-50`}
+        className={`h-14 flex justify-between items-center px-8 text-white ease-in duration-300 fixed w-full top-0 z-[100] ${
+          isScrolled || mobileOpen ? "bg-umakdarkblue" : "bg-transparent"
+        }`}
       >
         <div>
           <Link to="/">
             <div className="flex items-center space-x-2">
               <img src={logo} alt="" className="size-11" />
-              <h1 className="text-2xl font-marcellus">University of Makati</h1>
+              <h1 className="text-2xl font-marcellus text-nowrap">
+                University of Makati
+              </h1>
             </div>
           </Link>
         </div>
@@ -126,7 +129,11 @@ const Navbar = () => {
           <div className="flex items-center space-x-2 absolute right-0 z-[100]">
             <FaSearch size={20} className="hover:text-blue-300" />
             <div ref={menuButtonRef} onClick={() => setMobileOpen(!mobileOpen)}>
-              <IoMenu size={32} className="hover:text-blue-300 md:hidden" />
+              {mobileOpen ? (
+                <IoClose size={32} className="hover:text-blue-300 md:hidden" />
+              ) : (
+                <IoMenu size={32} className="hover:text-blue-300 md:hidden" />
+              )}
             </div>
           </div>
         </div>
@@ -135,7 +142,7 @@ const Navbar = () => {
       {/* mobile nav */}
       <nav
         ref={mobileNavRef}
-        className={`fixed top-0 right-0 h-screen text-white bg-umaklightblue flex flex-col pt-14 w-[300px] justify-start duration-500 ease-in-out font-medium text-sm overflow-hidden ${
+        className={`z-[99] fixed top-0 right-0 h-screen text-white bg-umaklightblue flex flex-col pt-14 w-72 justify-start duration-500 ease-in-out font-medium text-sm overflow-hidden ${
           mobileOpen ? "max-w-full" : "max-w-0"
         }`}
       >
