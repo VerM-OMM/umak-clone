@@ -8,7 +8,7 @@ const Alumni = () => {
     <>
       <Alumni_Carousel />
       <Alumni_Descriptions />
-      <Alumni_Links/>
+      <Alumni_Links />
     </>
   );
 };

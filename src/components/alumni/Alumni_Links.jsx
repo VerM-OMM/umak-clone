@@ -21,7 +21,7 @@ const Alumni_Links = () => {
         {/* section contents */}
         <div className="flex flex-col items-center md:gap-4 pb-4">
           <h1 className="text-4xl md:text-6xl font-medium">Be Involved</h1>
-          <p className="text-xl md:text-3xl text-center">
+          <p className="text-base md:text-3xl text-center">
             UPDATE YOUR INFORMATION WITH US
           </p>
           <Link

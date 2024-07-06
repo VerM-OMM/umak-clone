@@ -1,7 +1,11 @@
 import React from "react";
-
+import Featured_Title from "../components/alumni_featured/Featured_Title";
 const Featured = () => {
-  return <div>Featured</div>;
+  return (
+    <>
+      <Featured_Title />
+    </>
+  );
 };
 
 export default Featured;

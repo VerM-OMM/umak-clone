@@ -6,16 +6,16 @@ const Alumni_Descriptions = () => {
       {/* section title */}
       <div className="flex items-center md:space-x-8">
         <span className="h-[2.4px] bg-black rounded-full w-full hidden md:inline-block" />
-        <h1 className="text-nowrap md:text-4xl  flex font-medium-simulated text-2xl w-full  justify-center underline-offset-8 underline md:no-underline">
+        <h1 className="text-nowrap md:text-4xl flex font-medium-simulated text-xl w-full  justify-center underline-offset-8 underline md:no-underline">
           University of Makati Alumni Website
         </h1>
         <span className="h-[2.4px] bg-black rounded-full w-full hidden md:inline-block" />
       </div>
       {/* section contents */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-15 px-8 pb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-15 md:px-8 pb-8">
         <div className="flex flex-col items-center justify-start space-y-4">
           <h1 className="text-3xl font-medium-simulated">Alumni</h1>
-          <p className="text-justify leading-relaxed">
+          <p className="text-justify leading-normal">
             Step into the future of alumni engagement with the University of
             Makati Alumni Website a powerful digital ecosystem meticulously
             crafted to nurture, connect, and celebrate the journeys of our
@@ -32,7 +32,7 @@ const Alumni_Descriptions = () => {
         </div>
         <div className="flex flex-col items-center justify-start space-y-4">
           <h1 className="text-3xl font-medium-simulated">Featured Alumni</h1>
-          <p className="text-justify leading-relaxed">
+          <p className="text-justify leading-normal">
             Explore the Feature Alumni section, where inspiring stories of our
             distinguished graduates come to life. Delve into their achievements,
             career journeys, and contributions to society, showcasing the
@@ -45,7 +45,7 @@ const Alumni_Descriptions = () => {
         </div>
         <div className="flex flex-col items-center justify-start space-y-4">
           <h1 className="text-3xl font-medium-simulated">Newsroom</h1>
-          <p className="text-justify leading-relaxed">
+          <p className="text-justify leading-normal">
             The Newsroom provides a secluded space for alumni to access
             exclusive updates and stories tailored to their interests. Concealed
             behind a discreet link or password-protected portal, this section

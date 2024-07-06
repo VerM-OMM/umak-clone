@@ -164,10 +164,10 @@ const Navbar = () => {
             <Link to="/" className="py-4 pr-4 pl-10 hover:bg-blue-900">
               Alumni
             </Link>
-            <Link to="/" className="py-4 pr-4 pl-10 hover:bg-blue-900">
+            <Link to="/featured" className="py-4 pr-4 pl-10 hover:bg-blue-900">
               Featured Alumni
             </Link>
-            <Link to="/" className="py-4 pr-4 pl-10 hover:bg-blue-900">
+            <Link to="/alumnitracking" className="py-4 pr-4 pl-10 hover:bg-blue-900">
               Alumni Tracking
             </Link>
           </div>
@@ -193,7 +193,7 @@ const Navbar = () => {
               contactiAccordion ? "max-h-full" : "max-h-0"
             }`}
           >
-            <Link to="/" className="py-4 pr-4 pl-10 hover:bg-blue-900">
+            <Link to="/feedback" className="py-4 pr-4 pl-10 hover:bg-blue-900">
               Feedback
             </Link>
           </div>
