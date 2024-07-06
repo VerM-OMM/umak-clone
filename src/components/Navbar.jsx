@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`h-14 flex justify-between items-center px-4 md:px-8 text-white ease-in duration-300 fixed w-full top-0 z-[100] ${
+        className={`fixed top-0 z-[100] flex h-14 w-full items-center justify-between px-4 text-white duration-300 ease-in md:px-8 ${
           isScrolled || mobileOpen ? "bg-umakdarkblue" : "bg-transparent"
         }`}
       >
@@ -65,14 +65,14 @@ const Navbar = () => {
           <Link to="/">
             <div className="flex items-center space-x-2">
               <img src={logo} alt="" className="size-11" />
-              <h1 className="text-2xl font-marcellus text-nowrap">
+              <h1 className="text-nowrap font-marcellus text-2xl">
                 University of Makati
               </h1>
             </div>
           </Link>
         </div>
-        <div className="flex items-center relative font-metropolis">
-          <nav className="hidden md:flex items-center uppercase text-sm font-semibold mr-8 relative">
+        <div className="relative flex items-center font-metropolis">
+          <nav className="relative mr-8 hidden items-center text-sm font-semibold uppercase md:flex">
             <div
               className=""
               onMouseEnter={() => setAlumniHovered(true)}
@@ -82,9 +82,9 @@ const Navbar = () => {
                 Alumni
               </Link>
               <div
-                className={`absolute font-medium top-full left-0 text-nowrap text-xs bg-umakdarkblue flex flex-col overflow-hidden duration-300 ease-in-out ${
+                className={`absolute left-0 top-full flex flex-col overflow-hidden text-nowrap bg-umakdarkblue text-xs font-medium duration-300 ease-in-out ${
                   alumniHovered
-                    ? "max-h-96 border-white border-b border-x"
+                    ? "max-h-96 border-x border-b border-white"
                     : "max-h-0"
                 }`}
               >
@@ -114,9 +114,9 @@ const Navbar = () => {
                 Contact
               </Link>
               <div
-                className={`absolute top-full font-medium right-0 text-nowrap text-xs bg-umakdarkblue flex flex-col overflow-hidden duration-300 ease-in-out ${
+                className={`absolute right-0 top-full flex flex-col overflow-hidden text-nowrap bg-umakdarkblue text-xs font-medium duration-300 ease-in-out ${
                   contactHovered
-                    ? "max-h-96 border-white border-b border-x"
+                    ? "max-h-96 border-x border-b border-white"
                     : "max-h-0"
                 }`}
               >
@@ -126,7 +126,7 @@ const Navbar = () => {
               </div>
             </div>
           </nav>
-          <div className="flex items-center space-x-2 absolute right-0 z-[100]">
+          <div className="absolute right-0 z-[100] flex items-center space-x-2">
             <FaSearch size={20} className="hover:text-blue-300" />
             <div ref={menuButtonRef} onClick={() => setMobileOpen(!mobileOpen)}>
               {mobileOpen ? (
@@ -142,14 +142,14 @@ const Navbar = () => {
       {/* mobile nav */}
       <nav
         ref={mobileNavRef}
-        className={`z-[99] fixed top-0 right-0 h-screen text-white bg-umaklightblue flex flex-col pt-14 w-72 justify-start duration-500 ease-in-out font-medium text-sm overflow-hidden ${
+        className={`fixed right-0 top-0 z-[99] flex h-screen w-72 flex-col justify-start overflow-hidden bg-umaklightblue pt-14 text-sm font-medium text-white duration-500 ease-in-out ${
           mobileOpen ? "max-w-full" : "max-w-0"
         }`}
       >
         <div className="flex flex-col">
           <button
             onClick={() => setAlumniAccordion(!alumniAccordion)}
-            className="py-4 px-4 hover:bg-blue-900 w-full text-left flex items-center justify-between"
+            className="flex w-full items-center justify-between px-4 py-4 text-left hover:bg-blue-900"
           >
             Alumni
             <FaChevronDown
@@ -157,34 +157,34 @@ const Navbar = () => {
             />
           </button>
           <div
-            className={`flex flex-col bg-umakdarkblue overflow-hidden duration-300 ease-in-out ${
+            className={`flex flex-col overflow-hidden bg-umakdarkblue duration-300 ease-in-out ${
               alumniAccordion ? "max-h-full" : "max-h-0"
             }`}
           >
-            <Link to="/" className="py-4 pr-4 pl-10 hover:bg-blue-900">
+            <Link to="/" className="py-4 pl-10 pr-4 hover:bg-blue-900">
               Alumni
             </Link>
-            <Link to="/featured" className="py-4 pr-4 pl-10 hover:bg-blue-900">
+            <Link to="/featured" className="py-4 pl-10 pr-4 hover:bg-blue-900">
               Featured Alumni
             </Link>
             <Link
               to="/alumnitracking"
-              className="py-4 pr-4 pl-10 hover:bg-blue-900"
+              className="py-4 pl-10 pr-4 hover:bg-blue-900"
             >
               Alumni Tracking
             </Link>
           </div>
         </div>
-        <Link to="/news" className="py-4 px-4 hover:bg-blue-900">
+        <Link to="/news" className="px-4 py-4 hover:bg-blue-900">
           News
         </Link>
-        <Link to="/about" className="py-4 px-4 hover:bg-blue-900">
+        <Link to="/about" className="px-4 py-4 hover:bg-blue-900">
           About
         </Link>
         <div className="flex flex-col">
           <button
             onClick={() => setContactAccordion(!contactiAccordion)}
-            className="py-4 px-4 hover:bg-blue-900 w-full text-left flex items-center justify-between"
+            className="flex w-full items-center justify-between px-4 py-4 text-left hover:bg-blue-900"
           >
             Contact
             <FaChevronDown
@@ -192,11 +192,11 @@ const Navbar = () => {
             />
           </button>
           <div
-            className={`flex flex-col bg-umakdarkblue overflow-hidden duration-300 ease-in-out ${
+            className={`flex flex-col overflow-hidden bg-umakdarkblue duration-300 ease-in-out ${
               contactiAccordion ? "max-h-full" : "max-h-0"
             }`}
           >
-            <Link to="/feedback" className="py-4 pr-4 pl-10 hover:bg-blue-900">
+            <Link to="/feedback" className="py-4 pl-10 pr-4 hover:bg-blue-900">
               Feedback
             </Link>
           </div>

@@ -6,16 +6,16 @@ const Featured_Title = () => {
     //section container
     <div
       style={{ backgroundImage: `url(${UmakAdmin})` }}
-      className="container max-w-[2000px] mx-auto  antialiased bg-center bg-cover"
+      className="container mx-auto max-w-[2000px] bg-cover bg-center antialiased"
     >
-      <div className="bg-gradient-to-r from-umakdarkblue  via-transparent to-umakdarkblue pt-14 pb-8 md:pb-14 px-8 font-marcellus text-white space-y-4 md:space-y-8">
+      <div className="space-y-4 bg-gradient-to-r from-umakdarkblue via-transparent to-umakdarkblue px-8 pb-8 pt-14 font-marcellus text-white md:space-y-8 md:pb-14">
         {/* section title */}
-        <div className="flex items-center md:space-x-8 ">
-          <span className="h-[2.4px] bg-white rounded-full w-full hidden md:inline-block" />
-          <h1 className="text-nowrap md:text-6xl  font-medium flex text-2xl w-full md:w-auto justify-center underline-offset-8 underline md:no-underline">
+        <div className="flex items-center md:space-x-8">
+          <span className="hidden h-[2.4px] w-full rounded-full bg-white md:inline-block" />
+          <h1 className="flex w-full justify-center text-nowrap text-2xl font-medium underline underline-offset-8 md:w-auto md:text-6xl md:no-underline">
             Featured Alumni
           </h1>
-          <span className="h-[2.4px] bg-white rounded-full w-full hidden md:inline-block" />
+          <span className="hidden h-[2.4px] w-full rounded-full bg-white md:inline-block" />
         </div>
 
         <div className="flex justify-center text-center">

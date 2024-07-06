@@ -2,17 +2,17 @@ import React from "react";
 
 const Alumni_Descriptions = () => {
   return (
-    <div className="container max-w-[2000px] mx-auto py-6 px-8 bg-umakskyblue font-marcellus text-black space-y-8 antialiased">
+    <div className="container mx-auto max-w-[2000px] space-y-8 bg-umakskyblue px-8 py-6 font-marcellus text-black antialiased">
       {/* section title */}
       <div className="flex items-center md:space-x-8">
-        <span className="h-[2.4px] bg-black rounded-full w-full hidden md:inline-block" />
-        <h1 className="text-nowrap md:text-4xl flex font-medium-simulated text-xl w-full  justify-center underline-offset-8 underline md:no-underline">
+        <span className="hidden h-[2.4px] w-full rounded-full bg-black md:inline-block" />
+        <h1 className="flex w-full justify-center text-nowrap text-xl underline underline-offset-8 font-medium-simulated md:text-4xl md:no-underline">
           University of Makati Alumni Website
         </h1>
-        <span className="h-[2.4px] bg-black rounded-full w-full hidden md:inline-block" />
+        <span className="hidden h-[2.4px] w-full rounded-full bg-black md:inline-block" />
       </div>
       {/* section contents */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 lg:gap-15 md:px-8 pb-4 md:pb-8">
+      <div className="lg:gap-15 grid grid-cols-1 gap-6 pb-4 md:gap-10 md:px-8 md:pb-8 lg:grid-cols-2 xl:grid-cols-3">
         <div className="flex flex-col items-center justify-start space-y-4">
           <h1 className="text-3xl font-medium-simulated">Alumni</h1>
           <p className="text-justify leading-normal">

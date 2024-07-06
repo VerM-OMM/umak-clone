@@ -1,47 +1,53 @@
 import React from "react";
 
 const Featured_Profile = () => {
-  const profiles = [
+  const featuredProfiles = [
     {
-      imageProfile: "/img/profile1.jpg",
-      imageDesc: "moasdawda",
+      Image: "/img/profile1.jpg",
+      Name: "Oliver M. Molina",
+      College: "College of Computing and Information Sciences (2025)",
+      Program: "Application Development",
+      Description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, quas aut tenetur harum minus mollitia in quod architecto autem culpa?",
     },
     {
-      imageProfile: "/img/profile2.jpg",
-      imageDesc: "moasdawda",
-    },
-    {
-      imageProfile: "/img/profile3.jpg",
-      imageDesc: "moasdawda",
-    },
-    {
-      imageProfile: "/img/profile4.jpg",
-      imageDesc: "moasdawda",
+      Image: "/img/profile2.jpg",
+      Name: "Oliver M. Molina",
+      College: "College of Computing and Information Sciences (2025)",
+      Program: "Application Development",
+      Description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus, quas aut tenetur harum minus mollitia in quod architecto autem culpa?",
     },
   ];
 
   return (
-    <div className="container max-w-[2000px] mx-auto bg-umakskyblue py-8 px-8">
-      <div className="grid sm:grid-cols-2 gap-10 max-w-[1100px] mx-auto">
+    <div className="container mx-auto max-w-[2000px] bg-umakskyblue px-8 py-8">
+      <div className="mx-auto grid max-w-[1300px] gap-10 sm:grid-cols-2">
         {/* profile card */}
-        {profiles.map(({ imageProfile, imageDesc }, index) => (
-          <div
-            key={index}
-            className="bg-white overflow-hidden rounded-lg shadow-lg flex justify-center flex-col md:flex-row mx-auto"
-          >
-            <div className="w-[300px] h-[170px] md:w-96">
-              <img
-                className="h-full w-full object-cover object-center"
-                src={imageProfile}
-                alt="gallery-photo"
-              />
+        {featuredProfiles.map(
+          ({ Image, Name, Yeargrad, College, Program, Description }, index) => (
+            <div
+              key={index}
+              className="mx-auto flex flex-col justify-center overflow-hidden rounded-lg bg-white shadow-lg md:flex-row"
+            >
+              <div className="h-56 w-64">
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src={Image}
+                  alt="gallery-photo"
+                />
+              </div>
+              {/* profile desc */}
+              <div className="w-full px-4 py-2 font-metropolis text-base font-medium leading-normal">
+                <p className="text-lg">{Name}</p>
+                <p className="tex">{Yeargrad}</p>
+                <p className="">{College}</p>
+                <p className="">{Program}</p>
+                <p className="">{Description}</p>
+              </div>
             </div>
-            {/* profile desc */}
-            <div className="w-full text-base px-4 py-2">
-              <p className="">{imageDesc}</p>
-            </div>
-          </div>
-        ))}
+          ),
+        )}
       </div>
     </div>
   );
