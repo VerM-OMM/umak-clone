@@ -12,7 +12,7 @@ const Alumni_Descriptions = () => {
         <span className="h-[2.4px] bg-black rounded-full w-full hidden md:inline-block" />
       </div>
       {/* section contents */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-15 md:px-8 pb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 lg:gap-15 md:px-8 pb-4 md:pb-8">
         <div className="flex flex-col items-center justify-start space-y-4">
           <h1 className="text-3xl font-medium-simulated">Alumni</h1>
           <p className="text-justify leading-normal">

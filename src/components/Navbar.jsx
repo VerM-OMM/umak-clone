@@ -57,7 +57,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`h-14 flex justify-between items-center px-8 text-white ease-in duration-300 fixed w-full top-0 z-[100] ${
+        className={`h-14 flex justify-between items-center px-4 md:px-8 text-white ease-in duration-300 fixed w-full top-0 z-[100] ${
           isScrolled || mobileOpen ? "bg-umakdarkblue" : "bg-transparent"
         }`}
       >
@@ -167,7 +167,10 @@ const Navbar = () => {
             <Link to="/featured" className="py-4 pr-4 pl-10 hover:bg-blue-900">
               Featured Alumni
             </Link>
-            <Link to="/alumnitracking" className="py-4 pr-4 pl-10 hover:bg-blue-900">
+            <Link
+              to="/alumnitracking"
+              className="py-4 pr-4 pl-10 hover:bg-blue-900"
+            >
               Alumni Tracking
             </Link>
           </div>
