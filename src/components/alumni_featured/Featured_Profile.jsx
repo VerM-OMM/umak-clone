@@ -21,15 +21,15 @@ const Featured_Profile = () => {
   ];
 
   return (
-    <div className="container max-w-[2000px] mx-auto bg-umakskyblue px-4 md:px-8 py-8">
-      <div className="grid md:grid-cols-2 gap-4">
+    <div className="container max-w-[2000px] mx-auto bg-umakskyblue py-8 px-8">
+      <div className="grid sm:grid-cols-2 gap-10 max-w-[1100px] mx-auto">
         {/* profile card */}
         {profiles.map(({ imageProfile, imageDesc }, index) => (
           <div
             key={index}
-            className="flex flex-col items-center mx-auto bg-white overflow-hidden rounded-lg"
+            className="bg-white overflow-hidden rounded-lg shadow-lg flex justify-center flex-col md:flex-row mx-auto"
           >
-            <div className="w-[250px] h-[250px]">
+            <div className="w-[300px] h-[170px] md:w-96">
               <img
                 className="h-full w-full object-cover object-center"
                 src={imageProfile}

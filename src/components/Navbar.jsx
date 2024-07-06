@@ -88,12 +88,12 @@ const Navbar = () => {
                     : "max-h-0"
                 }`}
               >
-                <Link to="/featured" className="px-4 py-2 hover:bg-blue-900">
+                <Link to="/featured" className="px-4 py-3 hover:bg-blue-900">
                   Featured Alumni
                 </Link>
                 <Link
                   to="/alumnitracking"
-                  className="px-4 py-2 hover:bg-blue-900"
+                  className="px-4 py-3 hover:bg-blue-900"
                 >
                   Alumni Tracking Form
                 </Link>
@@ -120,7 +120,7 @@ const Navbar = () => {
                     : "max-h-0"
                 }`}
               >
-                <Link to="/" className="px-4 py-2 hover:bg-blue-900">
+                <Link to="/" className="px-4 py-3 hover:bg-blue-900">
                   Feedback
                 </Link>
               </div>
