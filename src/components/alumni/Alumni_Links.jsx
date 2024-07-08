@@ -6,7 +6,7 @@ const Alumni_Links = () => {
   return (
     <div
       style={{ backgroundImage: `url(${UmakAdmin})` }}
-      className="container mx-auto max-w-[2000px] bg-cover bg-center antialiased"
+      className="container mx-auto max-w-[4000px] bg-cover bg-center antialiased"
     >
       <div className="space-y-4 bg-gradient-to-r from-umakdarkblue via-transparent to-umakdarkblue px-8 py-6 font-metropolis text-white md:space-y-8">
         {/* section title */}

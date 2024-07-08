@@ -2,7 +2,7 @@ import React from "react";
 
 const Alumni_Descriptions = () => {
   return (
-    <div className="container mx-auto max-w-[2000px] space-y-8 bg-umakskyblue px-8 py-6 font-marcellus text-black antialiased">
+    <div className="container mx-auto max-w-[4000px] space-y-8 bg-umakskyblue px-8 py-6 font-marcellus text-black antialiased">
       {/* section title */}
       <div className="flex items-center md:space-x-8">
         <span className="hidden h-[2.4px] w-full rounded-full bg-black md:inline-block" />

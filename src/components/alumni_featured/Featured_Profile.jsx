@@ -41,7 +41,7 @@ const Featured_Profile = () => {
   ];
 
   return (
-    <div className="container mx-auto max-w-[2000px] bg-umakskyblue px-8 py-8">
+    <div className="container mx-auto max-w-[4000px] bg-umakskyblue px-8 py-8">
       <div className="mx-auto grid max-w-[1300px] gap-10 sm:grid-cols-2">
         {/* profile card */}
         {featuredProfiles.map(
@@ -50,7 +50,7 @@ const Featured_Profile = () => {
               key={index}
               className="mx-auto flex flex-col justify-center overflow-hidden rounded-lg bg-white shadow-lg lg:flex-row"
             >
-              <div className="h-56 w-auto lg:h-72 lg:w-72">
+              <div className="h-60 w-auto lg:w-72 lg:h-72">
                 <img
                   className="h-full w-full object-cover object-center"
                   src={Image}

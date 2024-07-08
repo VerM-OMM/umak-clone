@@ -7,7 +7,7 @@ import Carousel3 from "../../assets/carousel3.jpg";
 const MTcarousel = () => {
   return (
     <Carousel
-      className="container mx-auto max-w-[2000px]"
+      className="container mx-auto max-w-[4000px]"
       autoplay={true}
       loop={true}
       autoplayDelay={3000}

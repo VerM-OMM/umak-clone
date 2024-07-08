@@ -1,9 +1,8 @@
 import React from "react";
 import UmakAdmin from "../../assets/UmakAdmin.png";
 
-const Featured_Title = () => {
+const News_Title = () => {
   return (
-    //section container
     <div
       style={{ backgroundImage: `url(${UmakAdmin})` }}
       className="container mx-auto max-w-[4000px] bg-cover bg-center antialiased"
@@ -13,15 +12,14 @@ const Featured_Title = () => {
         <div className="flex items-center md:space-x-8">
           <span className="hidden h-[2.4px] w-full rounded-full bg-white md:inline-block" />
           <h1 className="flex w-full justify-center text-nowrap text-2xl font-medium underline underline-offset-8 md:w-auto md:text-6xl md:no-underline">
-            Featured Alumni
+           News
           </h1>
           <span className="hidden h-[2.4px] w-full rounded-full bg-white md:inline-block" />
         </div>
 
         <div className="flex justify-center text-center">
           <p className="text-base md:text-xl">
-            Alumni Herons showcasing their individual's achievements and
-            experience post-graduation.
+            The latest about Herons and UMak Community
           </p>
         </div>
       </div>
@@ -29,4 +27,4 @@ const Featured_Title = () => {
   );
 };
 
-export default Featured_Title;
+export default News_Title;
