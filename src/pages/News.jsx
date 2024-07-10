@@ -6,7 +6,7 @@ const News = () => {
   return (
     <>
       <News_Title />
-      <News_Cards/>
+      <News_Cards />
     </>
   );
 };

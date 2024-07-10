@@ -48,7 +48,7 @@ const News_Cards = () => {
                 className="h-full w-full object-cover object-center"
               />
             </div>
-            <div className="px-4 py-2 font-metropolis font-medium w-72">
+            <div className="w-72 px-4 py-2 font-metropolis font-medium">
               <p className="text-lg">{Title}</p>
               <p>{Description}</p>
               <p>{Date}</p>

@@ -2,10 +2,12 @@ import React from "react";
 
 const About_Hero = () => {
   return (
-    <div className="container mx-auto max-w-[4000px] bg-umakskyblue px-8 py-8">
-      <div className="container max-w-[1100px] mx-auto grid gap-10 md:grid-cols-2 leading-snug">
+    <div className="container mx-auto max-w-[4000px] bg-umakdarkblue px-8 py-8">
+      <div className="container mx-auto grid max-w-[1100px] gap-10 leading-snug md:grid-cols-2">
         <div className="rounded-lg bg-white px-5 py-5">
-          <h1 className="pb-2 font-serif text-3xl md:text-5xl font-bold">Mission</h1>
+          <h1 className="pb-2 font-serif text-3xl font-bold md:text-5xl">
+            Mission
+          </h1>
           <p className="text-wrap font-metropolis font-medium">
             The Center for Alumni Affairs exists to foster goodwill among UMAK
             alumni in support of the ideals and goals of the University. It
@@ -14,7 +16,9 @@ const About_Hero = () => {
           </p>
         </div>
         <div className="rounded-lg bg-white px-5 py-5">
-          <h1 className="pb-2 font-serif text-3xl md:text-5xl font-bold">Vision</h1>
+          <h1 className="pb-2 font-serif text-3xl font-bold md:text-5xl">
+            Vision
+          </h1>
           <p className="text-wrap font-metropolis font-medium">
             The Center for Alumni Affairs envisions to be the hub of all alumni
             matters at the University of Makati. It will strive to develop

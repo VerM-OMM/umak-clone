@@ -110,7 +110,7 @@ const Navbar = () => {
               onMouseEnter={() => setContactHovered(true)}
               onMouseLeave={() => setContactHovered(false)}
             >
-              <Link to="/" className="px-4 py-4 hover:text-blue-300">
+              <Link to="/contact" className="px-4 py-4 hover:text-blue-300">
                 Contact
               </Link>
               <div
@@ -120,7 +120,7 @@ const Navbar = () => {
                     : "max-h-0"
                 }`}
               >
-                <Link to="/" className="px-4 py-3 hover:bg-blue-900">
+                <Link to="/feedback" className="px-4 py-3 hover:bg-blue-900">
                   Feedback
                 </Link>
               </div>

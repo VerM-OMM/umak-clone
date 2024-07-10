@@ -12,7 +12,7 @@ const News_Title = () => {
         <div className="flex items-center md:space-x-8">
           <span className="hidden h-[2.4px] w-full rounded-full bg-white md:inline-block" />
           <h1 className="flex w-full justify-center text-nowrap text-2xl font-medium underline underline-offset-8 md:w-auto md:text-6xl md:no-underline">
-           News
+            News
           </h1>
           <span className="hidden h-[2.4px] w-full rounded-full bg-white md:inline-block" />
         </div>

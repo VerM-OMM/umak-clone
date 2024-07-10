@@ -12,7 +12,9 @@ import Error from "./pages/Error";
 
 function App() {
   return (
-    <BrowserRouter basename="/umak-clone">
+    //deploy
+    // basename="/umak-clone"
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Mainlayout />}>
           <Route index element={<Alumni />} />
