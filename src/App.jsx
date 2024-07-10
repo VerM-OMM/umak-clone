@@ -12,22 +12,20 @@ import Error from "./pages/Error";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Mainlayout />}>
-            <Route index element={<Alumni />} />
-            <Route path="alumnitracking" element={<Alumnitracking />} />
-            <Route path="featured" element={<Featured />} />
-            <Route path="news" element={<News />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="feedback" element={<Feedback />} />
-            <Route path="about" element={<About />} />
-            <Route path="*" element={<Error />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter basename="/umak-clone">
+      <Routes>
+        <Route path="/" element={<Mainlayout />}>
+          <Route index element={<Alumni />} />
+          <Route path="alumnitracking" element={<Alumnitracking />} />
+          <Route path="featured" element={<Featured />} />
+          <Route path="news" element={<News />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="feedback" element={<Feedback />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
